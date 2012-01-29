@@ -1,0 +1,3 @@
+[submodule "mysite"]
+	path = mysite
+	url = git://github.com/appsembler/djangotutorial.git

@@ -1,0 +1,25 @@
+name: djangotutorial
+
+mem: 64M
+
+instances: 1
+ 
+framework:
+    type: python
+    runtime: python27
+    
+env:
+    DJANGO_SETTINGS_MODULE: djangotutorial.settings
+    PYTHONPATH: /app/app/djangotutorial
+  
+hooks:
+    post-staging:
+        - python djangotutorial/manage.py syncdb --noinput
+
+services:
+    mysql: mysql-djangotutorial
+  
+ignores: 
+    - .git
+    - .pyc
+    - djangotutorial/db/mysite.db
