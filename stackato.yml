@@ -1,4 +1,9 @@
-name: djangotutorial
+#Required replacements... ::
+#  name -- app name chosen by the user
+#  project_root -- usually the name when you git clone the project, 
+#                  but needs to be the name of what you add to the python path
+
+name: mysite
 
 mem: 64M
 
@@ -9,17 +14,18 @@ framework:
     runtime: python27
     
 env:
-    DJANGO_SETTINGS_MODULE: djangotutorial.settings
-    PYTHONPATH: /app/app/djangotutorial
+    DJANGO_SETTINGS_MODULE: mysite.settings
+    PYTHONPATH: /app/app/mysite
   
 hooks:
     post-staging:
-        - python djangotutorial/manage.py syncdb --noinput
+        - python mysite/manage.py syncdb --noinput
 
 services:
-    mysql: mysql-djangotutorial
+    # TODO: make this conditional, so there's also support for PostgreSQL, Redis, Mongo, etc.
+    mysql: mysql-mysite
   
 ignores: 
-    - .git
-    - .pyc
-    - djangotutorial/db/mysite.db
+  - .git
+  - .pyc
+  - mysite/db/mysite.db
