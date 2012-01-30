@@ -5,6 +5,12 @@
 Django==1.3.1
 
 #================================================
+# django-stackato
+# http://pypi.python.org/pypi/django-stackato
+#================================================
+django-stackato
+
+#================================================
 # MySQL
 # http://pypi.python.org/pypi/MySQL-python
 #================================================
