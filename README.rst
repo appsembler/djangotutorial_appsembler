@@ -32,4 +32,19 @@ If you want to add your own git submodules, you can follow these steps. Rather t
 
 You should now have a directory ``mysite`` which contains the cloned repository djangotutorial.
 
-See the Github help for more info about `working with submodules <http://help.github.com/submodules/>`_
+See the Github help for more info about `working with submodules <http://help.github.com/submodules/>`_ and `this blog post <http://chrisjean.com/2009/04/20/git-submodules-adding-using-removing-and-updating/>`_
+
+Deploying to Appsembler
+-----------------------
+
+You can deploy this app to Appsembler with just a few commands. First download the Stackato command line tool from http://community.activestate.com/stackato/download
+
+Then you can deploy it the first time with::
+
+    $ stackato target http://api.somedomain.com
+    $ stackato login --email name@domain.com --password *****
+    $ stackato push
+
+The next time you need to deploy, you use the update command::
+
+    $ stackato update
