@@ -18,6 +18,8 @@ Copy the appsembler_settings.py file into the ``mysite`` directory::
 
     $ cp appsembler_settings.py mysite
     
+This will be done automatically by our web-based deploy process, but when using the command line, it needs to be done manually.
+
 Cloning this repo
 -----------------
 
