@@ -7,10 +7,17 @@ The project consists of:
 
  * stackato.yml
  * wsgi.py
- * requirements.pip
- * settings.py
+ * requirements.pip (these are install automatically by pip)
+ * appsembler_settings.py (necessary overrides)
  * djangotutorial (this is checked out as a git submodule - see below)
 
+Copy appsembler_settings file
+-----------------------------
+
+Copy the appsembler_settings.py file into the ``mysite`` directory::
+
+    $ cp appsembler_settings.py mysite
+    
 Cloning this repo
 -----------------
 
