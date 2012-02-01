@@ -14,7 +14,7 @@ framework:
     runtime: python27
     
 env:
-    DJANGO_SETTINGS_MODULE: mysite.settings
+    DJANGO_SETTINGS_MODULE: mysite.appsembler_settings
     PYTHONPATH: /app/app/mysite
   
 hooks:
@@ -28,4 +28,4 @@ services:
 ignores: 
   - .git
   - .pyc
-  - mysite/db/mysite.db
+  - db/mysite.db
