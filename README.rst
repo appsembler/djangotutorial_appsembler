@@ -7,18 +7,11 @@ The project consists of:
 
  * stackato.yml
  * wsgi.py
- * requirements.pip (these are install automatically by pip)
- * appsembler_settings.py (necessary overrides)
+ * requirements.pip (these are install automatically by pip. copy or symlink them from your project to here)
+ * appsembler_settings.py (necessary overrides - must be copied into `mysite` dir)
+ * manage.py (override the default manage.py - copy this into the `mysite` dir)
  * djangotutorial (this is checked out as a git submodule - see below)
 
-Copy appsembler_settings file
------------------------------
-
-Copy the appsembler_settings.py file into the ``mysite`` directory::
-
-    $ cp appsembler_settings.py mysite
-    
-This will be done automatically by our web-based deploy process, but when using the command line, it needs to be done manually.
 
 Cloning this repo
 -----------------
@@ -31,6 +24,20 @@ If you need to update the code from this repository, you simple run these comman
 
     $ git submodule init
     $ git submodule update
+
+Copy appsembler_settings file
+-----------------------------
+
+Copy the appsembler_settings.py file into the ``mysite`` directory::
+
+    $ cp appsembler_settings.py mysite
+    
+Also, copy the manage.py file into the ``mysite`` directory::
+
+    $ cp manage.py mysite
+    
+These steps will be done automatically by our web-based deploy process, but when using the command line, it needs to be done manually.
+
 
 Adding the djangotutorial repo as a submodule
 ---------------------------------------------
